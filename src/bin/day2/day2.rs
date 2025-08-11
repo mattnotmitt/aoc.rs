@@ -74,10 +74,10 @@ fn part2(reports: &Vec<Vec<i32>>) -> usize {
 }
 
 fn main() {
-    // let input = fs::read_to_string("src/day2/day2_example.txt")
+    // let input = fs::read_to_string("src/bin/day2/day2_example.txt")
     //     .expect("Should have been able to read the file.");
-    let input =
-        fs::read_to_string("src/day2/day2.txt").expect("Should have been able to read the file.");
+    let input = fs::read_to_string("src/bin/day2/day2.txt")
+        .expect("Should have been able to read the file.");
     let reports = parse(&input);
     let p1_result = part1(&reports);
     println!("Part 1: {p1_result}");

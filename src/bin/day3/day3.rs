@@ -99,9 +99,9 @@ fn part2(input: &str) -> i32 {
 }
 
 fn main() {
-    let input =
-        fs::read_to_string("src/day3/day3.txt").expect("Should have been able to read the file.");
-    // let input = fs::read_to_string("src/day3/day3_example.txt")
+    let input = fs::read_to_string("src/bin/day3/day3.txt")
+        .expect("Should have been able to read the file.");
+    // let input = fs::read_to_string("src/bin/day3/day3_example.txt")
     //     .expect("Should have been able to read the file.");
     // let (left, right) = parse(&input);
     let p1_result = part1(&input);
