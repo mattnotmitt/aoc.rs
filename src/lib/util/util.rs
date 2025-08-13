@@ -1,9 +1,9 @@
 use std::ops;
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, Hash, PartialEq, Eq)]
 pub struct Point2D {
-    x: isize,
-    y: isize,
+    pub x: isize,
+    pub y: isize,
 }
 
 impl ops::Add<Point2D> for Point2D {
