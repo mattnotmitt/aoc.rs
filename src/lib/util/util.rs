@@ -1,6 +1,6 @@
 use std::ops;
 
-#[derive(Clone, Copy, Hash, PartialEq, Eq)]
+#[derive(Clone, Copy, Hash, PartialEq, Eq, Debug)]
 pub struct Point2D {
     pub x: isize,
     pub y: isize,
@@ -12,6 +12,16 @@ impl ops::Add<Point2D> for Point2D {
         Point2D {
             x: self.x + rhs.x,
             y: self.y + rhs.y,
+        }
+    }
+}
+
+impl ops::Sub<Point2D> for Point2D {
+    type Output = Point2D;
+    fn sub(self, rhs: Point2D) -> Point2D {
+        Point2D {
+            x: self.x - rhs.x,
+            y: self.y - rhs.y,
         }
     }
 }
