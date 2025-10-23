@@ -52,7 +52,7 @@ impl Point2D {
     }
 }
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Direction2D {
     N,
     NE,
