@@ -79,6 +79,16 @@ impl Direction2D {
         return DIRECTIONS.iter();
     }
 
+    pub fn iter_cardinal() -> std::slice::Iter<'static, Direction2D> {
+        static DIRECTIONS: [Direction2D; 4] = [
+            Direction2D::N,
+            Direction2D::E,
+            Direction2D::S,
+            Direction2D::W,
+        ];
+        return DIRECTIONS.iter();
+    }
+
     fn resolve(&self) -> Point2D {
         return match self {
             Direction2D::N => Point2D::new(-1, 0),
