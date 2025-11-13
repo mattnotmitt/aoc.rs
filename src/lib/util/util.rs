@@ -42,6 +42,36 @@ impl Point2D {
         Point2D { x, y }
     }
 
+    pub fn move_wrap(&self, size: &(isize, isize), step: &Point2D) -> Point2D {
+        let mut new_pos = *self + *step;
+
+        new_pos.x = ((new_pos.x % size.0) + size.0) % size.0;
+        new_pos.y = ((new_pos.y % size.1) + size.1) % size.1;
+        assert!(
+            new_pos.x >= 0,
+            "new_pos.x ({:?}) must be non-negative",
+            new_pos
+        );
+        assert!(
+            new_pos.y >= 0,
+            "new_pos.y ({:?}) must be non-negative",
+            new_pos
+        );
+        assert!(
+            new_pos.x < size.0,
+            "new_pos.x ({:?}) must be less than {}",
+            new_pos,
+            size.0
+        );
+        assert!(
+            new_pos.y < size.1,
+            "new_pos.y ({:?}) must be less than {}",
+            new_pos,
+            size.1
+        );
+        return new_pos;
+    }
+
     pub fn safe_access<'a, T>(&self, grid: &'a Vec<Vec<T>>) -> Option<&'a T> {
         if self.x < 0 || self.y < 0 {
             return None;
@@ -49,6 +79,13 @@ impl Point2D {
         return grid
             .get(self.x as usize)
             .and_then(|r| r.get(self.y as usize));
+    }
+
+    pub fn update<T>(&self, grid: &mut Vec<Vec<T>>, val: T) {
+        if self.x < 0 || self.y < 0 {
+            return;
+        }
+        grid[self.x as usize][self.y as usize] = val;
     }
 }
 
