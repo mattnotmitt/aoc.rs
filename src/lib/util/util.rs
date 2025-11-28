@@ -89,7 +89,7 @@ impl Point2D {
     }
 }
 
-#[derive(Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash, Debug)]
 pub enum Direction2D {
     N,
     NE,
@@ -164,4 +164,8 @@ impl Direction2D {
             Direction2D::NW => Direction2D::NE,
         };
     }
+}
+
+pub fn remove_whitespace(s: &str) -> String {
+    s.chars().filter(|c| !c.is_whitespace()).collect()
 }
