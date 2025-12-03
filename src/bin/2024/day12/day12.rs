@@ -1,7 +1,6 @@
 use itertools::*;
 use std::collections::HashSet;
 use std::fs;
-use std::iter;
 use util::Direction2D;
 use util::Point2D;
 

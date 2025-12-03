@@ -1,8 +1,6 @@
-use itertools::*;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::fs;
-use std::iter;
 use util;
 use util::Direction2D;
 use util::Point2D;

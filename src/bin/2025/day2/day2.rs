@@ -1,7 +1,5 @@
 use itertools::*;
 use std::fs;
-use std::iter;
-use std::ops::Range;
 use std::ops::RangeInclusive;
 
 fn parse(input: &str) -> Vec<RangeInclusive<u64>> {

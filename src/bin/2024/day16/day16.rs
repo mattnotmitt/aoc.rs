@@ -3,7 +3,6 @@ use std::cmp::Ordering;
 use std::collections::{BinaryHeap, HashMap, HashSet};
 use std::fs;
 use std::hash::Hash;
-use std::iter;
 use std::u32::MAX;
 use util::*;
 

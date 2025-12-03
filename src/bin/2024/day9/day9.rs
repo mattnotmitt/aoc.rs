@@ -1,6 +1,4 @@
-use itertools::*;
 use std::fs;
-use std::iter;
 
 fn parse(input: &str) -> (Vec<i32>, Vec<(usize, u32)>, Vec<(usize, u32)>) {
     let mut disk: Vec<i32> = Vec::new();

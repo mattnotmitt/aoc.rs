@@ -1,6 +1,4 @@
-use itertools::*;
 use std::fs;
-use std::iter;
 
 fn parse(input: &str) -> Vec<Vec<u32>> {
     return input

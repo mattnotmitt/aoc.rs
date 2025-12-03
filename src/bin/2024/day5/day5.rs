@@ -3,7 +3,6 @@ use std::cmp::Ordering;
 use std::collections::HashMap;
 use std::collections::HashSet;
 use std::fs;
-use std::iter;
 
 fn parse(input: &str) -> (Vec<(u32, u32)>, Vec<Vec<u32>>) {
     let sections: Vec<&str> = input.split("\n\n").collect();
