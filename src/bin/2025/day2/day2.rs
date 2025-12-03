@@ -38,11 +38,8 @@ fn part2(ranges: &Vec<RangeInclusive<u64>>) -> u64 {
                 let rep_count = val_str.match_indices(val_split).collect::<Vec<_>>().len();
                 let req_count = val_str.len().div_ceil(i);
                 if rep_count == req_count {
-                    // println!("{val_str} <- {val_split} * {rep_count} == {req_count}");
                     count += val;
                     break;
-                } else {
-                    // println!("{val_str} <- {val_split} * {rep_count} =/= {req_count}");
                 }
             }
         }
